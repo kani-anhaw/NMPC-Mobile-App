@@ -3,10 +3,92 @@
 @tailwind utilities; */
 
 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Set the height of the container to the full viewport height */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+ img {
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%; /* Added to prevent the image from exceeding its original height */
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.primary-button,
+.secondary-button {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  width: 80%;
+  padding: 10px 20px;
+  border: 1px solid; /* Specify the border style */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bolder;
   
+}
+
+.primary-button span,
+.secondary-button span {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  
+}
+
+.primary-button {
+  background-color: #a41c23;
+  color: white;
+}
+
+.primary-button:focus,
+.primary-button:active {
+
+    border: 2px solid #a41c23;
+}
+
+.secondary-button {
+  background-color: transparent; /* Set the background color to transparent */
+  border-color: #f1d151; /* Set the border color for the secondary button */
+  color: #f1d151;
+}
+
+.secondary-button:focus,
+.secondary-button:active {
+
+  border: 1px solid #f1d04b;
+}
+
+
+.container-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+/* Hide .container-buttons on screens smaller than 600 pixels */
+@media (max-width: 600px) {
+  .container-buttons {
+    display: flex;
+  }
+}
+

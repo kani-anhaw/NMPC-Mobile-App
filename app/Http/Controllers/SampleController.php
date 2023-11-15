@@ -18,6 +18,10 @@ class SampleController extends Controller
         return view("auth.registration");
     }
 
+    public function welcome(){
+        return view("mobileApp.welcome");
+    }
+
     public function registerUser(Request $request){
         $request -> validate([
             'name'=>'required',
